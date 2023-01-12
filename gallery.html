@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>LAIC Design</title>
+
+        <!-- generics -->
+        <link rel="icon" href="/icons/favicon-32.png" sizes="32x32">
+        <link rel="icon" href="/icons/favicon-57.png" sizes="57x57">
+        <link rel="icon" href="/icons/favicon-76.png" sizes="76x76">
+        <link rel="icon" href="/icons/favicon-96.png" sizes="96x96">
+        <link rel="icon" href="/icons/favicon-128.png" sizes="128x128">
+        <link rel="icon" href="/icons/favicon-192.png" sizes="192x192">
+        <link rel="icon" href="/icons/favicon-228.png" sizes="228x228">
+
+        <!-- Android -->
+        <link rel="shortcut icon" sizes="196x196" href="/icons/favicon-196.png">
+
+        <!-- iOS -->
+        <link rel="apple-touch-icon" href="/icons/favicon-120.png" sizes="120x120">
+        <link rel="apple-touch-icon" href="icons/favicon-152.png" sizes="152x152">
+        <link rel="apple-touch-icon" href="icons/favicon-180.png" sizes="180x180">
+
+        <!-- Windows 8  IE 10-->
+        <meta name="msapplication-TileColor" content="#FFFFFF">
+        <meta name="msapplication-TileImage" content="/icons/favicon-144.png">
+
+        <!— Windows 8.1 + IE11 and above —>
+        <meta name="msapplication-config" content="/icons/browserconfig.xml" />
+
+        <link rel="stylesheet" href="style.css">
+        <!-- Load the jQuery library from a CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="main.js"></script>
+        <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+        <script src="gallery.js"></script>
+    </head>
+    <body>
+        <img class="logo" 
+            src="media/logo.png" 
+            alt="LAIC Design logo"/>
+
+        <!-- "Folder" tabs -->
+        <nav class="menu">
+            <ul>
+                <li class="inactive"><a href="index.html">About</a></li>
+                <li class="inactive"><a href="projects.html">Projects</a></li>
+                <li class="active"><a href="#">Gallery</a></li>
+                <li class="inactive"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- MAIN "folder" -->
+        <main id="container">
+            <content>
+                <h1><b>Gallery.</b></h1>
+
+                <p style="text-align: center;">Here are some of my <b>inspirations</b>, <b>flatlays</b>, and <b>designs</b>.</p>
+
+                <!-- Masonry grid --> 
+                <div class="grid">
+                    <!-- width of .grid-sizer used for columnWidth -->
+                    <div class="grid-sizer"></div>
+                    <div class="grid-item grid-item--width2"><img src="media/gallery/3.jpg"></div>
+                    <div class="grid-item grid-item--width4"><img src="media/gallery/1.jpg"></div>
+                    <div class="grid-item grid-item--width2"><img src="media/gallery/4.jpg"></div>
+                    <div class="grid-item grid-item--width2"><img src="media/gallery/14.jpg"></div>
+                    <div class="grid-item grid-item--width4"><img src="media/gallery/2.jpg"></div>
+                    <div class="grid-item grid-item--width2"><img src="media/gallery/5.jpg"></div>
+                    <div class="grid-item grid-item--width4"><img src="media/gallery/6.jpg"></div>
+                    <div class="grid-item grid-item--width2"><img src="media/gallery/7.jpg"></div>
+                    <div class="grid-item grid-item--width4"><img src="media/gallery/10.jpg"></div>
+                    <div class="grid-item grid-item--width3"><img src="media/gallery/8.jpg"></div>
+                    <div class="grid-item grid-item--width1"><img src="media/gallery/13.jpg"></div>
+                    <div class="grid-item grid-item--width1"><img src="media/gallery/12.jpg"></div>
+                    <div class="grid-item grid-item--width2"><img src="media/gallery/11.jpg"></div>
+                    <div class="grid-item grid-item--width1"><img src="media/gallery/18.jpg"></div>
+                    <div class="grid-item grid-item--width1"><img src="media/gallery/17.jpg"></div>
+                    <div class="grid-item grid-item--width2"><img src="media/gallery/21.jpg"></div>
+                    <div class="grid-item grid-item--width1"><img src="media/gallery/24.jpg"></div>
+                    <div class="grid-item grid-item--width4"><img src="media/gallery/19.jpg"></div>
+                    <div class="grid-item grid-item--width6"><img src="media/gallery/20.jpg"></div>
+                    <div class="grid-item grid-item--width4"><img src="media/gallery/22.jpg"></div>
+
+
+
+                </div>
+            </content>
+            <script> $("#container").css("height", ($("#grid").height() + 150));</script>
+        </main>
+    </body>
+</html>
