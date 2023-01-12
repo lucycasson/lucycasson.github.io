@@ -15,6 +15,8 @@ $(document).ready(function () {
   });
 
   // RELOADS PAGE ON RESIZE (FOR NOW)
+  var dwidth = $(window).width();
+
   $(window).resize(function () {
     var wwidth = $(window).width();
     if (dwidth !== wwidth) {
