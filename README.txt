@@ -1,4 +1,4 @@
-laic.design
+[laic.design](https://laic.design/index.html)
 
 
 LAIC Design and personal website of Lucy Casson.
@@ -10,4 +10,4 @@ All contents are the property of Lucy Casson.
 Contact laic.design/contact.html
 
 
-Site by Ryan Lawrence - ryan.surf
+Site by Ryan Lawrence - [ryan.surf](https://ryan.surf/)
