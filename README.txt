@@ -1,4 +1,4 @@
-[laic.design](https://laic.design/index.html)
+[laic.design](https://laic.design/)
 
 
 LAIC Design and personal website of Lucy Casson.
