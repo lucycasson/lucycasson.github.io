@@ -16,7 +16,11 @@ $(document).ready(function () {
 
   // RELOADS PAGE ON RESIZE (FOR NOW)
   $(window).resize(function () {
-    location.reload();
+    var wwidth = $(window).width();
+    if (dwidth !== wwidth) {
+      dwidth = $(window).width();
+      location.reload();
+    }
   });
 
   // Wait until images load to do page height animation
