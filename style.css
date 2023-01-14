@@ -195,7 +195,6 @@ img {
 
 img.logo {
     float: left;
-    width: 200px;
     height: 100px;
     box-shadow: none;
     position: static;
