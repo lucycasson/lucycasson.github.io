@@ -172,7 +172,7 @@ div.right {
 img {
     max-width: 95%;
     max-height: 95%;
-    margin-left: 5%;
+    margin-left: 15px;
     vertical-align: middle;
     margin-block: 7.5px;
     border-radius: 10px;
@@ -281,7 +281,7 @@ form li input {
 
     img {
         width: 70%;
-        margin-left: 15%;
+
         position: static;
     }
 
@@ -365,13 +365,13 @@ form li input {
 
 /* GALLERY ========================================================================= */  
 .grid-item img{
-    width: 100%;
+    width: calc(100% - 10px);
     height: 100%;
     object-fit: cover;
     object-position: center;
     border-radius: 10px;
-    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.1);
     margin-left: none;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
 /* REGULAR SCREEN SIZES */
@@ -393,15 +393,21 @@ form li input {
 
 /* MOBILE */
 @media screen and (max-width: 700px) {
-    .grid-item img { margin-left: 1.5%;
-                    position: none;}
-    .grid-sizer { width: 33%; }
-    .grid-item--width1 { width: 33%; }
-    .grid-item--width2 { width: 33%; }
-    .grid-item--width3 { width: 33%; }
-    .grid-item--width4 { width: 66%; }
-    .grid-item--width5 { width: 66%  }
-    .grid-item--width6 { width: 66%; }
+    .grid-sizer {
+        width: 33%;
+    }
+
+    .grid-item--width1,
+    .grid-item--width2,
+    .grid-item--width3 {
+        width: 33%;
+    }
+
+    .grid-item--width4,
+    .grid-item--width5,
+    .grid-item--width6 {
+        width: 66%;
+    }
 }
 
 
