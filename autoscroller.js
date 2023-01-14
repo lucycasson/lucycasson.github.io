@@ -28,7 +28,12 @@ $(document).ready(function () {
     setInterval(scrollDiv, 20);
   }
 
-  // Create scrolling divs
-  createScrollingDiv("scrollable");
-  createScrollingDiv("scrollable2");
+  // Wait for images to load before creating scrolling divs
+  $("#container")
+    .imagesLoaded()
+    .always(function () {
+      // Create scrolling divs
+      createScrollingDiv("scrollable");
+      createScrollingDiv("scrollable2");
+    });
 });
