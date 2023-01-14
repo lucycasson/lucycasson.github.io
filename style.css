@@ -172,7 +172,7 @@ div.right {
 img {
     max-width: 95%;
     max-height: 95%;
-    margin-left: 2.5%;
+    margin-left: 5%;
     vertical-align: middle;
     margin-block: 7.5px;
     border-radius: 10px;
@@ -294,7 +294,7 @@ form li input {
         width: 95%;
         text-align: center;
         position: relative;
-        top: 20px;
+        top: 27.5px;
         left: 2.5%;
     }
 
