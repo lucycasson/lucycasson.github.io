@@ -281,8 +281,10 @@ form li input {
 
     img {
         width: 70%;
-
+        display: block;
         position: static;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .frame {
