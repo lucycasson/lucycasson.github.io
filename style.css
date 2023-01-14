@@ -15,12 +15,8 @@ main {
     background-color: rgb(251, 183, 239);
     border-radius: 20px;
     position: absolute;
-    height: auto;
-    margin: 0px auto;
     margin-bottom: 10%;
-    display: block;
     top: 130px;
-    left: 2.5%;
     z-index: 1;
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
 }
@@ -256,7 +252,7 @@ form li input {
 }
 
 #container {
-    padding: 5px;
+    padding: auto;
     overflow: hidden;
 }
 
