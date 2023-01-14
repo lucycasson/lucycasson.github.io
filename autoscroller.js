@@ -4,7 +4,6 @@ $(document).ready(function () {
     const div = document.getElementById(id);
     var scrollWidth = div.scrollWidth;
     var animating = true;
-    console.log(scrollWidth);
 
     function scrollDiv() {
       if (animating == true) {
