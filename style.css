@@ -12,6 +12,7 @@ main {
     clear: both;
     width: 95%;
     left: 2.5%;
+    height: 600px;
     min-height: 600px;
     background-color: rgb(251, 183, 239);
     border-radius: 20px;

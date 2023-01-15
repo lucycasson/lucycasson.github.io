@@ -17,6 +17,12 @@ $(document).ready(function () {
     }
   });
 
+  $("#container").animate(
+    // Animate height to initial height
+    { height: 2000 },
+    1000
+  );
+
   $(".grid").imagesLoaded(function () {
     // init Masonry after all images have loaded
     $(".grid").masonry({
@@ -27,9 +33,29 @@ $(document).ready(function () {
       percentPosition: true,
       fitWidth: true,
     });
+    $("#container").height(auto);
   });
-});
 
-onbeforeunload = function () {
-  $("content").fadeOut("1000"); // Fade out content
-}; // TODO: Fix this (Delay loading of next page until fade out is complete)
+  $(".inactive")
+    .find("a")
+    .on("click", function (event) {
+      event.preventDefault(); // prevent the browser from following the link immediately
+      // play animation
+      $("nav li.active").animate(
+        // Animate active nav item
+        { top: "0px" },
+        300
+      );
+      $("content").fadeOut("1000"); // Fade out content
+
+      $("#container").animate(
+        // Animate height to auto height
+        { height: 600 },
+        250
+      );
+
+      setTimeout(function () {
+        window.location = event.target.href; // redirect the user to the link location after the animation
+      }, 300);
+    });
+});
