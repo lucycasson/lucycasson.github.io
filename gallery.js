@@ -19,7 +19,7 @@ $(document).ready(function () {
 
   $("#container").animate(
     // Animate height to initial height
-    { height: 2000 },
+    { height: 3000 },
     1000
   );
 
@@ -33,7 +33,9 @@ $(document).ready(function () {
       percentPosition: true,
       fitWidth: true,
     });
-    $("#container").height(auto);
+    setTimeout(function () {
+      $("#container").height(auto);
+    }, 4000);
   });
 
   $(".inactive")
@@ -49,7 +51,7 @@ $(document).ready(function () {
       $("content").fadeOut("1000"); // Fade out content
 
       $("#container").animate(
-        // Animate height to auto height
+        // Animate height to initial height
         { height: 600 },
         250
       );
