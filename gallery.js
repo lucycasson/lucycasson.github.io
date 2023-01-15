@@ -6,7 +6,7 @@ $(document).ready(function () {
     300
   );
 
-  // RELOADS PAGE ON RESIZE (FOR NOW)
+  // RELOADS PAGE ON RESIZE (just for gallery)
   var dwidth = $(window).width(); // Only on horizontal resize
 
   $(window).resize(function () {
@@ -17,7 +17,6 @@ $(document).ready(function () {
     }
   });
 
-  // GALLERY
   $(".grid").imagesLoaded(function () {
     // init Masonry after all images have loaded
     $(".grid").masonry({
@@ -28,16 +27,6 @@ $(document).ready(function () {
       percentPosition: true,
       fitWidth: true,
     });
-    let height = $("#container").height(); // Get auto height of container [CAN WE CALCULATE THIS WITHOUT SETTING IT?]
-    $("#container").css("height", localStorage.getItem("startingHeight"));
-    // Set height to stored height (from prev page)
-    $("#container").animate(
-      // Animate height to auto height
-      { height: height },
-      1000
-    );
-    localStorage.setItem("startingHeight", height); // Store height for next page
-    // TODO: fix auto height of container on window resize WITHOUT RELOADING PAGE
   });
 });
 

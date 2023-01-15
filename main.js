@@ -6,6 +6,35 @@ $(document).ready(function () {
     300
   );
 
+  // Wait until images load to do page height animation
+  $("#container")
+    .imagesLoaded()
+    .always(function () {
+      var $originalDiv = $("#container");
+      var $cloneDiv = $originalDiv.clone();
+      $cloneDiv.css("visibility", "hidden");
+      $("body").append($cloneDiv);
+
+      $cloneDiv.height("auto");
+      var newHeight = $cloneDiv.height();
+      console.log($cloneDiv.height());
+
+      $cloneDiv.remove();
+
+      $("#container").animate(
+        // Animate height to auto height
+        { height: newHeight },
+        1000
+      );
+
+      localStorage.setItem("startingHeight", newHeight); // Store height for next page
+    });
+
+  $(window).resize(function () {
+    newHeight = $("#container").height("auto").height();
+    localStorage.setItem("startingHeight", newHeight); // Store height for next page
+  });
+
   // after submit button is clicked, redirect to the next page
   $("#submit").click(function () {
     // wait for 1 second before redirecting
@@ -13,33 +42,6 @@ $(document).ready(function () {
       window.location.href = "received.html";
     }, 1000);
   });
-
-  // RELOADS PAGE ON RESIZE (FOR NOW)
-  var dwidth = $(window).width(); // Only on horizontal resize
-
-  $(window).resize(function () {
-    var wwidth = $(window).width();
-    if (dwidth !== wwidth) {
-      dwidth = $(window).width();
-      location.reload();
-    }
-  });
-
-  // Wait until images load to do page height animation
-  $("#container")
-    .imagesLoaded()
-    .always(function () {
-      let height = $("#container").height(); // Get auto height of container [CAN WE CALCULATE THIS WITHOUT SETTING IT?]
-      $("#container").css("height", localStorage.getItem("startingHeight"));
-      // Set height to stored height (from prev page)
-      $("#container").animate(
-        // Animate height to auto height
-        { height: height },
-        1000
-      );
-      localStorage.setItem("startingHeight", height); // Store height for next page
-      // TODO: fix auto height of container on window resize WITHOUT RELOADING PAGE
-    });
 });
 
 onbeforeunload = function () {

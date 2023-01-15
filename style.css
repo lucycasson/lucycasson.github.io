@@ -24,6 +24,7 @@ main {
 
 content {
     display: none;
+    height: none;
 }
 
 /* For background image transparency */
