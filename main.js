@@ -15,7 +15,7 @@ $(document).ready(function () {
   });
 
   // RELOADS PAGE ON RESIZE (FOR NOW)
-  var dwidth = $(window).width();
+  var dwidth = $(window).width(); // Only on horizontal resize
 
   $(window).resize(function () {
     var wwidth = $(window).width();
