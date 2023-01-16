@@ -23,20 +23,20 @@ $(document).ready(function () {
     1000
   );
 
-  $(".grid").imagesLoaded(function () {
-    // init Masonry after all images have loaded
-    $(".grid").masonry({
-      // set itemSelector so .grid-sizer is not used in layout
-      itemSelector: ".grid-item",
-      // use element for option
-      columnWidth: ".grid-sizer",
-      percentPosition: true,
-      fitWidth: true,
+  $(".grid")
+    .imagesLoaded()
+    .always(function () {
+      // init Masonry after all images have loaded
+      $(".grid").masonry({
+        // set itemSelector so .grid-sizer is not used in layout
+        itemSelector: ".grid-item",
+        // use element for option
+        columnWidth: ".grid-sizer",
+        percentPosition: true,
+        fitWidth: true,
+      });
+      $("#container").height(auto); // BUG: This code is not executing (need decoy?)
     });
-    setTimeout(function () {
-      $("#container").height(auto);
-    }, 4000);
-  });
 
   $(".inactive")
     .find("a")
