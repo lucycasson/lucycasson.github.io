@@ -425,7 +425,6 @@ form li input {
     overflow-x: auto;
     overscroll-behavior: none;
     height: 360px;
-    margin: 1%;
     padding: 0;
     border-radius: 30px;
     box-sizing: border-box;
@@ -439,6 +438,7 @@ form li input {
     flex: 0 0 auto;
     margin-left: 0px;
     margin-right: 0px;
+    margin-top: 5px;
     /* border: 5px solid #fafafa; */
     width: auto;
     height: 350px;
@@ -446,9 +446,9 @@ form li input {
 
 .card img {
     /* border: thin solid black; */
+    margin-top: 0px;
     height: 350px;
     width: auto;
-    margin-top: 5px;
     margin-left: 10px;
     margin-bottom: 10px;
     max-width: 100%;
@@ -468,10 +468,17 @@ form li input {
     height: 170px;
     width: auto;
 }
+
+.card--triple {
+    margin-top: 5px;
+}
+
 .card--triple div {
-    display: block;
+    display: inline-block;
     /* border: thin solid rgb(255, 0, 0); */
-    height: 180px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    height: 170px;
     width: auto;
 }
 
