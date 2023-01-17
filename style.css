@@ -16,11 +16,20 @@ main {
     min-height: 600px;
     background-color: rgb(251, 183, 239);
     border-radius: 20px;
-    position: absolute;
-    margin-bottom: 10%;
-    top: 130px;
+    position: relative;
     z-index: 1;
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.padding {
+    clear:both;
+    position: absolute;
+    padding-bottom: 50px;
+}
+
+#container {
+    padding: auto;
+    overflow: hidden;
 }
 
 content {
@@ -120,10 +129,9 @@ nav ul {
     padding: 0;
     float: right;
     width: 50%;
-    position: absolute;
-    top: 95px;
+    position: relative;
+    top: 85px;
     right: 2%;
-    z-index: 0;
 }
 
 nav li {
@@ -133,6 +141,7 @@ nav li {
     text-align: center;
     border-radius: 10px;
     z-index: 0;
+    margin-top: 1px;
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
     font-family: cursive;
     font-size: larger;
@@ -197,7 +206,7 @@ img.logo {
     float: left;
     height: 100px;
     box-shadow: none;
-    position: static;
+    position: relative;
     transform: none;
 }
 
@@ -253,11 +262,6 @@ form li {
 form li input {
     cursor: url(media/clicker.png), auto;
     background-color: rgb(244, 198, 240);
-}
-
-#container {
-    padding: auto;
-    overflow: hidden;
 }
 
 .social-media-icons {
@@ -327,6 +331,7 @@ form li input {
 /* WIDE SCREENS */
 @media screen and (min-width: 1100px) {
     main {
+        top: 50px;
         width: 80%;
         left: 10%;
     }
@@ -338,7 +343,6 @@ form li input {
 
     nav ul {
         width: 40%;
-        top: 90px;
         right: 10%;
     }
 
