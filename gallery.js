@@ -35,7 +35,7 @@ $(document).ready(function () {
         percentPosition: true,
         fitWidth: true,
       });
-      $("#container").height(auto); // BUG: This code is not executing (need decoy?)
+      $("#container").height(auto); // BUG: This code is not executing (need decoy)
     });
 
   $(".inactive")

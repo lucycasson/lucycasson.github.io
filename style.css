@@ -375,8 +375,12 @@ form li input {
 
 
 /* GALLERY ========================================================================= */  
+#grid {
+    width: 98%;
+}
+
 .grid-item img{
-    width: calc(100% - 10px);
+    width: calc(100% - 5px);
     height: 100%;
     object-fit: cover;
     object-position: center;
@@ -388,36 +392,40 @@ form li input {
 /* REGULAR SCREEN SIZES */
 
 /* fluid 10 columns */
-.grid-sizer { width: 9%; }
+.grid-sizer { width: 8.9%; }
 /* 1/10th */
-.grid-item--width1 { width: 9%; }
+.grid-item--width1 { width: 8.9%; }
 /* 2/10ths */
-.grid-item--width2 { width: 18%; }
+.grid-item--width2 { width: 17.8%; }
 /* 3/10ths */
-.grid-item--width3 { width: 27%; }
+.grid-item--width3 { width: 26.7%; }
 /* 4/10ths */
-.grid-item--width4 { width: 36%; }
+.grid-item--width4 { width: 35.6%; }
 /* 5/10ths */
-.grid-item--width5 { width: 45%; }
+.grid-item--width5 { width: 44.5%; }
 /* 6/10ths */
-.grid-item--width6 { width: 54%; }
+.grid-item--width6 { width: 53.4%; }
 
 /* MOBILE */
 @media screen and (max-width: 700px) {
     .grid-sizer {
-        width: 33%;
+        width: 32.9%;
     }
 
     .grid-item--width1,
     .grid-item--width2,
     .grid-item--width3 {
-        width: 33%;
+        width: 32.9%;
     }
 
     .grid-item--width4,
     .grid-item--width5,
     .grid-item--width6 {
-        width: 66%;
+        width: 65.8%;
+    }
+
+    .grid-item img {
+        width: calc(100% -10px);
     }
 }
 
