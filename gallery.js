@@ -19,7 +19,7 @@ $(document).ready(function () {
 
   $("#container").animate(
     // Animate height to initial height
-    { height: 3000 },
+    { height: 4000 },
     1000
   );
 
