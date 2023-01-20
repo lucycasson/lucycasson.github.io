@@ -1,11 +1,4 @@
 $(document).ready(function () {
-  $("content").fadeIn("1000"); // Fade in content
-  $("nav li.active").animate(
-    // Animate active nav item
-    { top: "-15px" },
-    300
-  );
-
   // AUTOSCROLL FOR PROJECTS PAGE
   function createScrollingDiv(id) {
     const div = document.getElementById(id);
@@ -34,12 +27,6 @@ $(document).ready(function () {
     setInterval(scrollDiv, 20);
   }
 
-  $("#container").animate(
-    // Animate height to initial height
-    { height: 1000 },
-    1000
-  );
-
   // Wait for images to load before creating scrolling divs
   $("#container")
     .imagesLoaded()
@@ -47,29 +34,5 @@ $(document).ready(function () {
       // Create scrolling divs
       createScrollingDiv("scrollable");
       createScrollingDiv("scrollable2");
-      $("#container").height(auto);
-    });
-
-  $(".inactive")
-    .find("a")
-    .on("click", function (event) {
-      event.preventDefault(); // prevent the browser from following the link immediately
-      // play animation
-      $("nav li.active").animate(
-        // Animate active nav item
-        { top: "0px" },
-        300
-      );
-      $("content").fadeOut("1000"); // Fade out content
-
-      $("#container").animate(
-        // Animate height to auto height
-        { height: 600 },
-        250
-      );
-
-      setTimeout(function () {
-        window.location = event.target.href; // redirect the user to the link location after the animation
-      }, 300);
     });
 });

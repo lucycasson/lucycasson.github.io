@@ -1,14 +1,6 @@
 $(document).ready(function () {
-  $("content").fadeIn("1000"); // Fade in content
-  $("nav li.active").animate(
-    // Animate active nav item
-    { top: "-15px" },
-    300
-  );
-
   // RELOADS PAGE ON RESIZE (just for gallery)
   var dwidth = $(window).width(); // Only on horizontal resize
-
   $(window).resize(function () {
     var wwidth = $(window).width();
     if (dwidth !== wwidth) {
@@ -16,12 +8,6 @@ $(document).ready(function () {
       location.reload();
     }
   });
-
-  $("#container").animate(
-    // Animate height to initial height
-    { height: 4000 },
-    1000
-  );
 
   $(".grid")
     .imagesLoaded()
@@ -35,29 +21,5 @@ $(document).ready(function () {
         percentPosition: true,
         fitWidth: true,
       });
-      $("#container").height(auto); // BUG: This code is not executing (need decoy)
-    });
-
-  $(".inactive")
-    .find("a")
-    .on("click", function (event) {
-      event.preventDefault(); // prevent the browser from following the link immediately
-      // play animation
-      $("nav li.active").animate(
-        // Animate active nav item
-        { top: "0px" },
-        300
-      );
-      $("content").fadeOut("1000"); // Fade out content
-
-      $("#container").animate(
-        // Animate height to initial height
-        { height: 600 },
-        250
-      );
-
-      setTimeout(function () {
-        window.location = event.target.href; // redirect the user to the link location after the animation
-      }, 300);
     });
 });

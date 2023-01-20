@@ -6,34 +6,43 @@ $(document).ready(function () {
     300
   );
 
-  $("#container")
+  // Creates a clone div so we can animate out to auto height (animates clone then fades in real)
+
+  var $originalDiv = $("#container");
+  var offset = $originalDiv.offset();
+
+  var $cloneDiv = $originalDiv.clone();
+  $("body").append($cloneDiv);
+
+  $cloneDiv.css({
+    position: "absolute",
+    top: offset.top - 8,
+    "z-index": 100000,
+  });
+  $cloneDiv.height("500");
+
+  $cloneDiv.css("visibility", "visible");
+
+  $("#container") // wait until photos load, especially important for gallery
     .imagesLoaded()
     .always(function () {
-      var $originalDiv = $("#container");
-      var $cloneDiv = $originalDiv.clone();
-      $cloneDiv.css("visibility", "hidden");
-      $("body").append($cloneDiv);
-
-      $cloneDiv.height("auto");
-      var newHeight = $cloneDiv.height();
       console.log($cloneDiv.height());
+      var newHeight = $originalDiv.height();
+      console.log($originalDiv.height());
 
-      $cloneDiv.remove();
-
-      $("#container").animate(
-        // Animate height to auto height
-        { height: newHeight },
-        1000
-      );
+      $cloneDiv
+        .animate(
+          // Animate height to auto height
+          { height: newHeight },
+          1000
+        )
+        .promise()
+        .done(function () {
+          $originalDiv.css("visibility", "visible");
+          $cloneDiv.fadeOut(500);
+          console.log($cloneDiv.height());
+        });
     });
-
-  // after submit button is clicked, redirect to the next page
-  $("#submit").click(function () {
-    // wait for 1 second before redirecting
-    setTimeout(function () {
-      window.location.href = "received.html";
-    }, 1000);
-  });
 
   $(".inactive")
     .find("a")
@@ -49,7 +58,7 @@ $(document).ready(function () {
 
       $("#container").animate(
         // Animate height to auto height
-        { height: 600 },
+        { height: 500 },
         250
       );
 

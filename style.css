@@ -6,17 +6,18 @@ body {
     background-image: url(media/overlay.png);
     background-repeat: repeat;
     background-color: rgb(16, 42, 109);
+    position: relative;
 }
 
 main {
     clear: both;
     width: 95%;
     left: 2.5%;
-    height: 600px;
-    min-height: 600px;
+    visibility: hidden;
+    /* height: auto; */
+    min-height: 500px;
     background-color: rgb(251, 183, 239);
     border-radius: 20px;
-    position: relative;
     z-index: 1;
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
 }
@@ -28,6 +29,7 @@ main {
 }
 
 #container {
+    position: relative;
     padding: auto;
     overflow: hidden;
 }
