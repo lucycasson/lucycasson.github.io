@@ -247,7 +247,8 @@ input, textarea {
 textarea {
     padding-top: 2px;
     height: 150px;
-    resize: none;
+    min-height: 150px;
+    resize: vertical;
 }
 
 form li {
