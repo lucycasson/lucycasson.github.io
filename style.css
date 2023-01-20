@@ -98,13 +98,27 @@ h4 {
     line-height: 0.8;
 }
 
+@keyframes shine {
+  from { background-position: 0% center; }
+  to { background-position: 200% center; }
+}
+
 b {
     background-clip: text;
     -webkit-background-clip: text;
     /* For Safari */
     color: transparent;
-    background-image: linear-gradient(to bottom right, rgb(200, 73, 166), rgb(117, 123, 231));
+    background: linear-gradient(to right, rgb(200, 73, 166), rgb(117, 123, 231), rgb(200, 73, 166));
+    background-size: 200% auto;
     text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.1);
+
+    color: #000;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: shine 2s linear infinite;
 }
 
 h1 {
