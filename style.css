@@ -14,7 +14,6 @@ main {
     width: 95%;
     left: 2.5%;
     visibility: hidden;
-    /* height: auto; */
     min-height: 500px;
     background-color: rgb(251, 183, 239);
     border-radius: 20px;
