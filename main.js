@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $("content").fadeIn("1000"); // Fade in content
+  $("content").fadeIn("500"); // Fade in content
   $("nav li.active").animate(
     // Animate active nav item
     { top: "-15px" },
@@ -26,9 +26,7 @@ $(document).ready(function () {
   $("#container") // wait until photos load, especially important for gallery
     .imagesLoaded()
     .always(function () {
-      console.log($cloneDiv.height());
       var newHeight = $originalDiv.height();
-      console.log($originalDiv.height());
 
       $cloneDiv
         .animate(
@@ -39,8 +37,7 @@ $(document).ready(function () {
         .promise()
         .done(function () {
           $originalDiv.css("visibility", "visible");
-          $cloneDiv.fadeOut(500);
-          console.log($cloneDiv.height());
+          $cloneDiv.fadeOut(400);
         });
     });
 
