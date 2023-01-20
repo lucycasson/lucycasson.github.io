@@ -95,7 +95,6 @@ h3,
 h4 {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     text-align: center;
-    line-height: 0.8;
 }
 
 @keyframes shine {
@@ -313,6 +312,10 @@ form li input {
         height: auto;
         margin: auto;
         display: block;
+    }
+
+    h2 {
+        font-size: 1.4em;
     }
 
     img {
