@@ -51,7 +51,7 @@ nav li::before {
     left: 0px;
     background-repeat: repeat;
     opacity: 0.25;
-    z-index: 0;
+    z-index: -0;
 }
 
 nav li::before {
@@ -269,6 +269,12 @@ form li input {
 .social-media-icons {
     text-align: center;
     /* align the icons horizontally */
+    z-index: 100001 !important;
+}
+
+.social-media-icons a {
+    z-index: 1000001 !important; 
+    position: relative;
 }
 
 .social-media-icon {
@@ -277,7 +283,7 @@ form li input {
     /* display the icons on the same line */
     max-width: 30px;
     border-radius: 25%;
-    z-index: 100001;
+    z-index: 100001 !important;
 }
 
 /* MOBILE */
@@ -327,7 +333,7 @@ form li input {
         width: 100%;
         float: none;
         display: inline-block;
-    }
+    }    
 }
 
 /* WIDE SCREENS */
