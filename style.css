@@ -125,14 +125,15 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 30px;
 }
 
 h3 {
-    font-size: larger;
+    font-size: 1.5em;
 }
 
 h4 {
+    font-size: larger;
     line-height: 0;
 }
 

@@ -63,7 +63,7 @@ $(document).ready(function () {
       }, 500);
     }
 
-    // Remove overlay on esc key press
+    // Remove overlay on any key press
     $(document).keyup(function (e) {
       removeOverlay();
     });
