@@ -4,6 +4,7 @@
 
 body {
     background-image: url(media/overlay.png);
+    background-size: 100%;
     background-repeat: repeat;
     background-color: rgb(16, 42, 109);
     position: relative;
@@ -43,7 +44,7 @@ main::before,
 nav li::before {
     content: "";
     background-image: url(media/overlay.png);
-    background-size: cover;
+    background-size: 100%;
     position: absolute;
     top: 0px;
     right: 0px;
