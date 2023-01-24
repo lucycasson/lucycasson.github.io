@@ -44,7 +44,7 @@ main::before,
 nav li::before {
     content: "";
     background-image: url(media/overlay.png);
-    background-size: 100%;
+    background-size: 200%;
     position: absolute;
     top: 0px;
     right: 0px;
