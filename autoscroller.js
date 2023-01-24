@@ -48,7 +48,7 @@ $(document).ready(function () {
     $("body").append($overlay);
     setTimeout(function () {
       $overlay.addClass("fade-in");
-    }, 10);
+    }, 100);
     $(document).on("click", ".overlay", function (event) {
       var $duplicate = $(".duplicate-image");
       $duplicate.removeClass("fade-in");
@@ -58,9 +58,5 @@ $(document).ready(function () {
         $(".overlay").remove();
       }, 500);
     });
-    // $overlay.on("click", function (event) {
-    //   $(".duplicate-image").remove();
-    //   $(".overlay").remove();
-    // });
   });
 });

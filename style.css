@@ -534,25 +534,24 @@ form li input {
     height: 100%;
     background-color: rgba(0, 0, 0, 0); /* initial state with transparent background */
     z-index: 999;
-    transition: background-color .5s ease-in-out; /* enable transition */
+    transition: background-color 0.5s ease-in-out, backdrop-filter 0.5s ease-in-out;
     cursor: url(media/clicker.png), auto;
 }
 
 .overlay.fade-in {
-    background-color: rgba(0, 0, 0, 0.5); /* final state with semi-transparent black background */
+    background-color: rgba(0, 0, 0, 0.7); /* final state with semi-transparent black background */
+    backdrop-filter: blur(10px);
 }
 
 
 .card--double img {
     display: block;
-    /* border: thin solid rgb(255, 0, 0); */
     height: 170px;
     width: auto;
 }
 
 .card--triple img {
     display: block;
-    /* border: thin solid rgb(255, 0, 0); */
     height: 170px;
     width: auto;
 }
@@ -563,7 +562,6 @@ form li input {
 
 .card--triple div {
     display: inline-block;
-    /* border: thin solid rgb(255, 0, 0); */
     margin-top: 0px;
     margin-bottom: 10px;
     height: 170px;
@@ -572,13 +570,6 @@ form li input {
 
 .card--triple div img {
     display: inline-block;
-    /* border: thin solid rgb(255, 0, 0); */
     height: 170px;
     width: auto;
 }
-
-/* 
-.card img:hover {
-    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 1);
-}
- */
