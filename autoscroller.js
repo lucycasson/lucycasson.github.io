@@ -60,10 +60,8 @@ $(document).ready(function () {
       }, 500);
     }
 
-    $(document).on("keyup", function (event) {
-      if (event.keyCode === 27) {
-        removeOverlay();
-      }
+    $(document).keyup(function (e) {
+      removeOverlay();
     });
 
     $(document).on("click", ".overlay", function (event) {
