@@ -505,6 +505,7 @@ form li input {
     max-height: 100%;
     z-index: 1;
     transition: transform .3s ease-in-out; /* Animation */
+    cursor: url(media/clicker.png), auto;
 }
 
 .duplicate-image {
@@ -534,6 +535,7 @@ form li input {
     background-color: rgba(0, 0, 0, 0); /* initial state with transparent background */
     z-index: 999;
     transition: background-color .5s ease-in-out; /* enable transition */
+    cursor: url(media/clicker.png), auto;
 }
 
 .overlay.fade-in {
