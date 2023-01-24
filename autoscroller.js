@@ -35,4 +35,32 @@ $(document).ready(function () {
       createScrollingDiv("scrollable");
       createScrollingDiv("scrollable2");
     });
+
+  $(".card img").on("click", function () {
+    var $duplicate = $(this).clone();
+    $("body").append($duplicate);
+    $duplicate.addClass("duplicate-image");
+    setTimeout(function () {
+      $duplicate.addClass("fade-in");
+    }, 100);
+
+    var $overlay = $('<div class="overlay"></div>');
+    $("body").append($overlay);
+    setTimeout(function () {
+      $overlay.addClass("fade-in");
+    }, 10);
+    $(document).on("click", ".overlay", function (event) {
+      var $duplicate = $(".duplicate-image");
+      $duplicate.removeClass("fade-in");
+      $overlay.removeClass("fade-in");
+      setTimeout(function () {
+        $duplicate.remove();
+        $(".overlay").remove();
+      }, 500);
+    });
+    // $overlay.on("click", function (event) {
+    //   $(".duplicate-image").remove();
+    //   $(".overlay").remove();
+    // });
+  });
 });
