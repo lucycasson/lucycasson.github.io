@@ -49,7 +49,8 @@ $(document).ready(function () {
     setTimeout(function () {
       $overlay.addClass("fade-in");
     }, 100);
-    $(document).on("click", ".overlay", function (event) {
+
+    function removeOverlay() {
       var $duplicate = $(".duplicate-image");
       $duplicate.removeClass("fade-in");
       $overlay.removeClass("fade-in");
@@ -57,6 +58,16 @@ $(document).ready(function () {
         $duplicate.remove();
         $(".overlay").remove();
       }, 500);
+    }
+
+    $(document).on("keyup", function (event) {
+      if (event.keyCode === 27) {
+        removeOverlay();
+      }
+    });
+
+    $(document).on("click", ".overlay", function (event) {
+      removeOverlay();
     });
   });
 });
