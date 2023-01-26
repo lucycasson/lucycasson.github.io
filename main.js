@@ -69,4 +69,8 @@ $(document).ready(function () {
         window.location = event.target.href; // redirect the user to the link location after the animation
       }, 300);
     });
+
+  const emojis = ["😽", "🐶", "🐸", "🐈", "🐕", "🦢", "🐤", "🦆", "🐨", "🐰"];
+  var randomNo = Math.floor(Math.random() * 10);
+  document.title = "LAIC Design " + emojis[randomNo];
 });
