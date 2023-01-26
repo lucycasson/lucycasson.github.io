@@ -1,7 +1,7 @@
 $(document).ready(function () {
-  $("content").fadeIn("500"); // Fade in content
+  $("content").fadeIn("500"); // fade in content
   $("nav li.active").animate(
-    // Animate active nav item
+    // animate active nav item
     { top: "-15px" },
     300
   );
@@ -30,14 +30,17 @@ $(document).ready(function () {
 
       $cloneDiv
         .animate(
-          // Animate height to auto height
+          // animate height to auto height
           { height: newHeight },
           1000
         )
         .promise()
         .done(function () {
-          $originalDiv.css("visibility", "visible");
-          $cloneDiv.fadeOut(400);
+          $(".loading").fadeOut(400); // fade out loading animation
+          setTimeout(function () {
+            $originalDiv.css("visibility", "visible");
+            $cloneDiv.fadeOut(400);
+          }, 300);
         });
     });
 
@@ -47,14 +50,16 @@ $(document).ready(function () {
       event.preventDefault(); // prevent the browser from following the link immediately
       // play animation
       $("nav li.active").animate(
-        // Animate active nav item
+        // animate active nav item
         { top: "0px" },
         300
       );
-      $("content").fadeOut("1000"); // Fade out content
+      $(".loading").fadeIn(400); // fade in loading animation
+
+      $("content").fadeOut("1000"); // fade out content
 
       $("#container").animate(
-        // Animate height to auto height
+        // animate height to auto height
         { height: 500 },
         250
       );
