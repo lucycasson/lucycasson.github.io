@@ -70,7 +70,28 @@ $(document).ready(function () {
       }, 300);
     });
 
-  const emojis = ["😽", "🐶", "🐸", "🐈", "🐕", "🦢", "🐤", "🦆", "🐨", "🐰"];
-  var randomNo = Math.floor(Math.random() * 10);
+  const emojis = [
+    "😽",
+    "🐶",
+    "🐸",
+    "🐈",
+    "🐕",
+    "🦢",
+    "🐤",
+    "🦆",
+    "🐨",
+    "🐰",
+    "🐼",
+    "🦊",
+    "🐭",
+    "🐴",
+    "🐳",
+    "🐬",
+    "🦘",
+    "🦒",
+    "🦩",
+    "🐑",
+  ];
+  var randomNo = Math.floor(Math.random() * 20);
   document.title = "LAIC Design " + emojis[randomNo];
 });
