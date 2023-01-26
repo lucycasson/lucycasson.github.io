@@ -309,7 +309,7 @@ form li input {
 @media screen and (max-width: 700px) {
     main {
         width: 97.5%;
-        left: 1.75%;
+        left: 1.25%;
     }
 
     img.logo {
@@ -342,7 +342,7 @@ form li input {
         text-align: center;
         position: relative;
         top: 27.5px;
-        left: 1.75%;
+        left: 1.25%;
     }
 
     nav li {
