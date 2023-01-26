@@ -307,6 +307,11 @@ form li input {
 
 /* MOBILE */
 @media screen and (max-width: 700px) {
+    main {
+        width: 97.5%;
+        left: 1.75%;
+    }
+
     img.logo {
         float: none;
         width: 120px;
@@ -333,11 +338,11 @@ form li input {
 
     nav ul {
         float: none;
-        width: 95%;
+        width: 97.5%;
         text-align: center;
         position: relative;
         top: 27.5px;
-        left: 2.5%;
+        left: 1.75%;
     }
 
     nav li {
