@@ -22,6 +22,7 @@ $(document).ready(function () {
   $cloneDiv.height("500");
 
   $cloneDiv.css("visibility", "visible");
+  $(".loading").css("opacity", "60%");
 
   $("#container") // wait until photos load, especially important for gallery
     .imagesLoaded()
@@ -44,6 +45,7 @@ $(document).ready(function () {
         });
     });
 
+  // ON CLICK TO NEW PAGE
   $(".inactive")
     .find("a")
     .on("click", function (event) {
@@ -54,7 +56,6 @@ $(document).ready(function () {
         { top: "0px" },
         300
       );
-      $(".loading").fadeIn(400); // fade in loading animation
 
       $("content").fadeOut("1000"); // fade out content
 

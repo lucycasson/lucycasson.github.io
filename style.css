@@ -594,7 +594,8 @@ form li input {
     margin: 1em auto;
     text-align: center;
     visibility: visible;
-    opacity: 60%;
+    opacity: 0%;
+    transition: all 0.7s;
 }
 
 .loading span {
