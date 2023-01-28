@@ -381,6 +381,10 @@ form li input {
         display: inline-block;
     }    
 
+    .social-media-icons a {
+        padding: 10px;
+    }
+
     @media screen and (max-width: 583px) {
         div.left img {
             width: 262.5px;
