@@ -371,10 +371,20 @@ form li input {
         position: static;
     }
 
+    div.left img {
+        width: 525px;
+    }
+
     div.right {
         width: 100%;
         float: none;
         display: inline-block;
+    }    
+
+    @media screen and (max-width: 583px) {
+        div.left img {
+            width: 262.5px;
+        }
     }    
 }
 
