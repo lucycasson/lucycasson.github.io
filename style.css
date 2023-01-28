@@ -606,6 +606,11 @@ form li input {
     visibility: visible;
     opacity: 0%;
     transition: all 0.7s;
+    font-size: 30px;
+    font-family: 'Optima';
+    color: rgba(0, 0, 0, 1);
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 .loading span {
