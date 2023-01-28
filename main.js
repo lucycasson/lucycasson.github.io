@@ -90,6 +90,7 @@ $(document).ready(function () {
             "media/project_photos/bathroom/old2.jpg",
             "media/project_photos/bathroom/old1.jpg",
             "media/project_photos/bathroom/old3.jpg",
+            "media/project_photos/bathroom/top1.jpg",
             "media/project_photos/bathroom/top2.jpg",
             "media/project_photos/bathroom/wide1.jpg",
             "media/project_photos/bathroom/niche1.jpg",
