@@ -69,12 +69,21 @@ nav li a {
     position: relative;
     z-index: 1 !important;
     /* This flexbox code stretches the link's clickable 
-   * area to fit its parent block. */
+    * area to fit its parent block. */
+    top: 2px;
+    bottom: 2px;
     display: flex;
     flex-grow: 1;
     flex-shrink: 1;
     justify-content: center;
     cursor: url(media/clicker.png), auto;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 h1,
@@ -346,9 +355,12 @@ form li input {
     }
 
     nav li {
+        height: 55px;
         padding: 0 0px;
         font-size: 3.5vw;
     }
+
+    nav li 
 
     div.left {
         width: 100%;
@@ -387,7 +399,7 @@ form li input {
     }
 
     nav li a {
-        line-height: 45px;
+        line-height: 35px;
         z-index: 1;
     }
 }
