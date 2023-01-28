@@ -33,14 +33,14 @@ $(document).ready(function () {
         .animate(
           // animate height to auto height
           { height: newHeight },
-          1000
+          250
         )
         .promise()
         .done(function () {
           $(".loading").fadeOut(400); // fade out loading animation
           setTimeout(function () {
             $originalDiv.css("visibility", "visible");
-            $cloneDiv.fadeOut(400);
+            $cloneDiv.fadeOut(300);
           }, 300);
 
           // Now that this page is loaded, we can preload other page images so they load faster
@@ -137,17 +137,20 @@ $(document).ready(function () {
         300
       );
 
-      $("content").fadeOut("1000"); // fade out content
+      $("content").fadeOut("50"); // fade out content
 
-      $("#container").animate(
-        // animate height to auto height
-        { height: 500 },
-        250
-      );
-
-      setTimeout(function () {
-        window.location = event.target.href; // redirect the user to the link location after the animation
-      }, 300);
+      $("#container")
+        .animate(
+          // animate height to auto height
+          { height: 500 },
+          250
+        )
+        .promise()
+        .done(function () {
+          setTimeout(function () {
+            window.location = event.target.href; // redirect the user to the link location after the animation
+          }, 50);
+        });
     });
 
   const emojis = [
