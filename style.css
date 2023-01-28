@@ -135,11 +135,11 @@ h1 {
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 25px;
 }
 
 h3 {
-    font-size: 1.4em;
+    font-size: 1.2em;
 }
 
 h4 {
@@ -331,6 +331,10 @@ form li input {
 
     h2 {
         font-size: 1.4em;
+    }
+
+    h3 {
+        font-size: 1.1em;
     }
 
     img {
