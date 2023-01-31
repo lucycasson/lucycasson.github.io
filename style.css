@@ -193,11 +193,12 @@ nav.menu {
 /* Columns, left (33%) and right (66%) */
 div.left {
     float: left;
-    height: 100%;
+    height: 80%;
     width: 33%;
+    display:block;
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: 15%;
+    bottom: 25%;
 }
 
 div.right {
