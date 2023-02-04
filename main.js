@@ -102,6 +102,20 @@ $(document).ready(function () {
             "media/project_photos/bathroom/big.jpg",
             "media/project_photos/bathroom/final.jpg",
           ]);
+          // FREELANCE PRELOAD
+          $.preload([
+            "media/project_photos/freelance/floorplan.jpg",
+            "media/project_photos/freelance/drawing.jpg",
+            "media/project_photos/freelance/floorplan2.jpg",
+            "media/project_photos/freelance/render.jpg",
+            "media/project_photos/freelance/drawing2.jpg",
+            "media/project_photos/freelance/render2.jpg",
+            "media/project_photos/freelance/floorplan3.jpg",
+            "media/project_photos/freelance/drawing3.jpg",
+            "media/project_photos/freelance/render3.jpg",
+            "media/project_photos/freelance/floorplan4.jpg",
+            "media/project_photos/freelance/render4.jpg",
+          ]);
           // LCI PROJECT PRELOAD
           $.preload([
             "media/project_photos/home/sketch.JPG",
