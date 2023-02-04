@@ -111,7 +111,26 @@ h4 {
   to { background-position: 200% center; }
 }
 
-b {
+content a {
+    position: relative;
+    z-index: 1000000 !important;
+    cursor: url(media/clicker.png), auto !important;
+    font-weight: bold;
+}
+
+content a:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(to right, rgb(200, 73, 166), rgb(117, 123, 231), rgb(200, 73, 166));
+    background-size: 200% auto;
+    animation: shine 2s linear infinite;
+  }
+
+content a, b {
     background-clip: text;
     -webkit-background-clip: text;
     /* For Safari */
@@ -501,7 +520,7 @@ form li input {
 
 
 /* Cards */
-#scrollable, #scrollable2 {
+#scrollable, #scrollable2, #scrollable3 {
     display: flex;
     width: 98%;
     flex-wrap: nowrap;

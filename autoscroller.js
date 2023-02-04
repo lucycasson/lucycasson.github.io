@@ -34,6 +34,7 @@ $(document).ready(function () {
       // Create scrolling divs
       createScrollingDiv("scrollable");
       createScrollingDiv("scrollable2");
+      createScrollingDiv("scrollable3");
     });
 
   // When the user clicks an image, clone it, add duplicate-image class, and fade the clone in
