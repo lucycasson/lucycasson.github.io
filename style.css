@@ -185,7 +185,7 @@ nav li {
     z-index: 0;
     margin-top: 1px;
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
-    font-family: bradley hand, helvetica, cursive;
+    font-family: "Bradley Hand", "Georgia", "Times New Roman", "Lucida Calligraphy", "Trebuchet MS", cursive;    
     font-size: larger;
 }
 
