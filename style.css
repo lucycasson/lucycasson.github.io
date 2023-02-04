@@ -92,8 +92,7 @@ h3,
 h4,
 label,
 p {
-    font-family: 'Optima';
-    color: rgba(0, 0, 0, 1);
+    font-family: "Optima", Arial, Helvetica, Verdana, Tahoma, Trebuchet MS, sans-serif;    color: rgba(0, 0, 0, 1);
     margin-left: 15px;
     margin-right: 15px;
     font-size: 18px;
@@ -262,8 +261,7 @@ form {
     height: 100%;
     display: block;
     z-index: 1;
-    font-family: 'Optima';
-}
+    font-family: "Optima", Arial, Helvetica, Verdana, Tahoma, Trebuchet MS, sans-serif;}
 
 label {
     float: center;
@@ -282,8 +280,7 @@ input, textarea {
     font-size: 20px;
     color: rgba(0, 0, 0, 0.9);
     cursor: url(media/text.png), auto;
-    font-family: 'Optima';
-    background-color: rgb(244, 198, 240);
+    font-family: "Optima", Arial, Helvetica, Verdana, Tahoma, Trebuchet MS, sans-serif;    background-color: rgb(244, 198, 240);
 }
 
 textarea {
