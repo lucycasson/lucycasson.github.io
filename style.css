@@ -118,7 +118,7 @@ content a {
     font-weight: bold;
 }
 
-content a:after {
+content p a:after {
     content: "";
     position: absolute;
     bottom: 0;
