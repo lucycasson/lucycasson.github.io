@@ -14,12 +14,12 @@ $(document).ready(function () {
   var $cloneDiv = $originalDiv.clone();
   $("body").append($cloneDiv);
 
+  $cloneDiv.height("500");
   $cloneDiv.css({
     position: "absolute",
     top: offset.top - 8,
     "z-index": 100000,
   });
-  $cloneDiv.height("500");
 
   $cloneDiv.css("visibility", "visible");
   $(".loading").css("opacity", "60%");
