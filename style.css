@@ -7,6 +7,7 @@ body {
     background-size: 100%;
     background-repeat: repeat;
     background-color: rgb(16, 42, 109);
+    background: var(--arc-palette-background, rgb(16, 42, 109));
     position: relative;
 }
 
@@ -17,6 +18,7 @@ main {
     visibility: hidden;
     min-height: 500px;
     background-color: rgb(251, 183, 239);
+    background-color: var(--arc-palette-foregroundPrimary, rgb(251, 183, 239));
     border-radius: 20px;
     z-index: 1;
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
@@ -190,11 +192,13 @@ nav li {
 
 nav li.active {
     background-color: rgb(251, 183, 239);
+    background-color: var(--arc-palette-foregroundPrimary, rgb(251, 183, 239));
     position: relative;
 }
 
 nav li.inactive {
     background-color: rgb(220, 136, 205);
+    background-color: var(--arc-palette-foregroundTertiary,  rgb(220, 136, 205));
 }
 
 nav li a {
