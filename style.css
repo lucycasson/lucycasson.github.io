@@ -280,7 +280,8 @@ input, textarea {
     font-size: 20px;
     color: rgba(0, 0, 0, 0.9);
     cursor: url(media/text.png), auto;
-    font-family: "Optima", Arial, Helvetica, Verdana, Tahoma, Trebuchet MS, sans-serif;    background-color: rgb(244, 198, 240);
+    font-family: "Optima", Arial, Helvetica, Verdana, Tahoma, Trebuchet MS, sans-serif;    
+    background-color: var(--arc-palette-foregroundPrimary, rgb(251, 183, 239));
 }
 
 textarea {
@@ -308,7 +309,7 @@ form li {
 
 form li input {
     cursor: url(media/clicker.png), auto;
-    background-color: rgb(244, 198, 240);
+    background-color: var(--arc-palette-foregroundPrimary, rgb(251, 183, 239));
 }
 
 .social-media-icons {
