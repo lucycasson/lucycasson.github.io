@@ -124,7 +124,7 @@ content p a:after {
     left: 0;
     right: 0;
     height: 2px;
-    background: linear-gradient(to right, rgb(200, 73, 166), rgb(117, 123, 231), rgb(200, 73, 166));
+    background: linear-gradient(to right, var(--arc-background-gradient-color0, rgb(200, 73, 166)), var(--arc-background-gradient-overlay-color1, rgb(117, 123, 231)), var(--arc-background-gradient-color0, rgb(200, 73, 166)));
     background-size: 200% auto;
     animation: shine 2s linear infinite;
   }
@@ -134,7 +134,7 @@ content a, b {
     -webkit-background-clip: text;
     /* For Safari */
     color: transparent;
-    background: linear-gradient(to right, rgb(200, 73, 166), rgb(117, 123, 231), rgb(200, 73, 166));
+    background: linear-gradient(to right, var(--arc-background-gradient-color0, rgb(200, 73, 166)), var(--arc-background-gradient-overlay-color1, rgb(117, 123, 231)), var(--arc-background-gradient-color0, rgb(200, 73, 166)));
     background-size: 200% auto;
     text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.1);
 
