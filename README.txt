@@ -10,4 +10,4 @@ All contents are the property of Lucy Casson.
 Contact https://laic.design/contact
 
 
-Site by Ryan Lawrence - [ryan.surf](https://ryan.surf/)
+Site by Ryan Lawrence - [ryall.dev](https://ryall.dev/)
