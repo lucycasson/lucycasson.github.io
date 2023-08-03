@@ -263,6 +263,21 @@ $(document).ready(function () {
       const mouseX = event.clientX;
       const mouseY = event.clientY + window.pageYOffset; // Add the scroll position
 
+      // Define an array of vibrant spark colors
+      const sparkColors = [
+          "#E57373", // Red
+          "#F06292", // Pink
+          "#BA68C8", // Purple
+          "#9575CD", // Deep Purple
+          "#64B5F6", // Blue
+          "#4FC3F7", // Light Blue
+          "#81C784", // Green
+          "#DCE775", // Lime
+          "#FFD54F", // Yellow
+          "#FFB74D", // Orange
+          "#FF8A65", // Deep Orange
+      ];
+
       // Generate a random number of sparks between 5-15
       const numSparks = Math.floor(Math.random() * 11) + 5;
 
@@ -271,9 +286,11 @@ $(document).ready(function () {
           // Create a spark at the mouse position
           const spark = $("<div>").addClass("spark");
 
-          // Randomize spark size and color
-          const sparkSize = Math.random() * 6 + 2; // Random size between 2 and 8
-          const sparkColor = getRandomColor();
+          // Randomize spark size
+          const sparkSize = Math.random() * 15 + 2; // Random size between 2 and 8
+
+          // Randomly select a spark color from the predefined array
+          const sparkColor = sparkColors[Math.floor(Math.random() * sparkColors.length)];
 
           spark.css({
               left: mouseX + "px",
@@ -300,14 +317,4 @@ $(document).ready(function () {
           animateSpark(spark, mouseX, mouseY, initialVelocityX, initialVelocityY, gravityAcceleration, 1, sparkDuration);
       }
   });
-
-  // Helper function to get a random color in hexadecimal format
-  function getRandomColor() {
-      const letters = "0123456789ABCDEF";
-      let color = "#";
-      for (let i = 0; i < 6; i++) {
-          color += letters[Math.floor(Math.random() * 16)];
-      }
-      return color;
-  }
 });
