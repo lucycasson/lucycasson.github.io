@@ -23,7 +23,7 @@ main {
 }
 
 .padding {
-    clear:both;
+    clear: both;
     position: absolute;
     padding-bottom: 50px;
 }
@@ -92,7 +92,8 @@ h3,
 h4,
 label,
 p {
-    font-family: "Optima", Arial, Helvetica, Verdana, Tahoma, Trebuchet MS, sans-serif;    color: rgba(0, 0, 0, 1);
+    font-family: "Optima", Arial, Helvetica, Verdana, Tahoma, Trebuchet MS, sans-serif;
+    color: rgba(0, 0, 0, 1);
     margin-left: 15px;
     margin-right: 15px;
     font-size: 18px;
@@ -107,7 +108,9 @@ h4 {
 }
 
 @keyframes shine {
-  to { background-position: 200% center; }
+    to {
+        background-position: 200% center;
+    }
 }
 
 content a {
@@ -127,9 +130,10 @@ content p a:after {
     background: linear-gradient(to right, var(--arc-background-gradient-color0, rgb(200, 73, 166)), var(--arc-background-gradient-overlay-color1, rgb(117, 123, 231)), var(--arc-background-gradient-color0, rgb(200, 73, 166)));
     background-size: 200% auto;
     animation: shine 2s linear infinite;
-  }
+}
 
-content a, b {
+content a,
+b {
     background-clip: text;
     -webkit-background-clip: text;
     /* For Safari */
@@ -184,7 +188,7 @@ nav li {
     z-index: 0;
     margin-top: 1px;
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
-    font-family: "Bradley Hand", "Georgia", "Times New Roman", "Lucida Calligraphy", "Trebuchet MS", cursive;    
+    font-family: "Bradley Hand", "Georgia", "Times New Roman", "Lucida Calligraphy", "Trebuchet MS", cursive;
     font-size: larger;
 }
 
@@ -194,7 +198,7 @@ nav li.active {
 }
 
 nav li.inactive {
-    background-color: var(--arc-palette-focus,  rgb(220, 136, 205));
+    background-color: var(--arc-palette-focus, rgb(220, 136, 205));
 }
 
 nav li a {
@@ -213,7 +217,7 @@ div.left {
     float: left;
     height: 80%;
     width: 33%;
-    display:block;
+    display: block;
     position: absolute;
     top: 15%;
     bottom: 25%;
@@ -261,7 +265,8 @@ form {
     height: 100%;
     display: block;
     z-index: 1;
-    font-family: "Optima", Arial, Helvetica, Verdana, Tahoma, Trebuchet MS, sans-serif;}
+    font-family: "Optima", Arial, Helvetica, Verdana, Tahoma, Trebuchet MS, sans-serif;
+}
 
 label {
     float: center;
@@ -270,7 +275,8 @@ label {
     margin: 10px;
 }
 
-input, textarea {
+input,
+textarea {
     text-align: center;
     width: 70%;
     height: 50px;
@@ -280,7 +286,7 @@ input, textarea {
     font-size: 20px;
     color: rgba(0, 0, 0, 0.9);
     cursor: url(media/text.png), auto;
-    font-family: "Optima", Arial, Helvetica, Verdana, Tahoma, Trebuchet MS, sans-serif;    
+    font-family: "Optima", Arial, Helvetica, Verdana, Tahoma, Trebuchet MS, sans-serif;
     background-color: var(--arc-palette-foregroundPrimary, rgb(251, 183, 239));
 }
 
@@ -319,7 +325,7 @@ form li input {
 }
 
 .social-media-icons a {
-    z-index: 1000001 !important; 
+    z-index: 1000001 !important;
     position: relative;
 }
 
@@ -397,7 +403,7 @@ form li input {
         width: 100%;
         float: none;
         display: inline-block;
-    }    
+    }
 
     .social-media-icons a {
         padding: 10px;
@@ -407,7 +413,7 @@ form li input {
         div.left img {
             width: 262.5px;
         }
-    }    
+    }
 }
 
 /* WIDE SCREENS */
@@ -456,12 +462,12 @@ form li input {
 }
 
 
-/* GALLERY ========================================================================= */  
+/* GALLERY ========================================================================= */
 #grid {
     width: 98%;
 }
 
-.grid-item img{
+.grid-item img {
     width: calc(100% - 5px);
     height: 100%;
     object-fit: cover;
@@ -474,19 +480,39 @@ form li input {
 /* REGULAR SCREEN SIZES */
 
 /* fluid 10 columns */
-.grid-sizer { width: 8.9%; }
+.grid-sizer {
+    width: 8.9%;
+}
+
 /* 1/10th */
-.grid-item--width1 { width: 8.9%; }
+.grid-item--width1 {
+    width: 8.9%;
+}
+
 /* 2/10ths */
-.grid-item--width2 { width: 17.8%; }
+.grid-item--width2 {
+    width: 17.8%;
+}
+
 /* 3/10ths */
-.grid-item--width3 { width: 26.7%; }
+.grid-item--width3 {
+    width: 26.7%;
+}
+
 /* 4/10ths */
-.grid-item--width4 { width: 35.6%; }
+.grid-item--width4 {
+    width: 35.6%;
+}
+
 /* 5/10ths */
-.grid-item--width5 { width: 44.5%; }
+.grid-item--width5 {
+    width: 44.5%;
+}
+
 /* 6/10ths */
-.grid-item--width6 { width: 53.4%; }
+.grid-item--width6 {
+    width: 53.4%;
+}
 
 /* MOBILE */
 @media screen and (max-width: 700px) {
@@ -518,7 +544,9 @@ form li input {
 
 
 /* Cards */
-#scrollable, #scrollable2, #scrollable3 {
+#scrollable,
+#scrollable2,
+#scrollable3 {
     display: flex;
     width: 98%;
     flex-wrap: nowrap;
@@ -533,7 +561,7 @@ form li input {
     overflow: hidden;
     position: relative;
 }
-  
+
 .card {
     z-index: 2;
     flex: 0 0 auto;
@@ -556,17 +584,21 @@ form li input {
     max-width: 100%;
     max-height: 100%;
     z-index: 1;
-    transition: transform .3s ease-in-out; /* Animation */
+    transition: transform .3s ease-in-out;
+    /* Animation */
     cursor: url(media/clicker.png), auto;
 }
 
 .duplicate-image {
-    opacity: 0; /* initial state with transparent */
-    transition: opacity .5s ease-in-out; /* enable transition */
+    opacity: 0;
+    /* initial state with transparent */
+    transition: opacity .5s ease-in-out;
+    /* enable transition */
     border-radius: 50px;
     position: fixed;
     margin-left: 0%;
-    z-index: 1000000; /* set z-index to be above other elements */
+    z-index: 1000000;
+    /* set z-index to be above other elements */
     max-width: 80%;
     max-height: 80%;
     top: 50%;
@@ -575,7 +607,8 @@ form li input {
 }
 
 .duplicate-image.fade-in {
-    opacity: 1; /* final state with opaque */
+    opacity: 1;
+    /* final state with opaque */
 }
 
 .overlay {
@@ -585,14 +618,16 @@ form li input {
     width: 100%;
     height: 100vh;
     padding-bottom: 50px;
-    background-color: rgba(0, 0, 0, 0); /* initial state with transparent background */
+    background-color: rgba(0, 0, 0, 0);
+    /* initial state with transparent background */
     z-index: 999;
     transition: background-color 0.5s ease-in-out, backdrop-filter 0.5s ease-in-out;
     cursor: url(media/clicker.png), auto;
 }
 
 .overlay.fade-in {
-    background-color: rgba(0, 0, 0, 0.7); /* final state with semi-transparent black background */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* final state with semi-transparent black background */
     backdrop-filter: blur(10px);
 }
 
@@ -669,13 +704,60 @@ form li input {
     }
 }
 
-.loading span:nth-child(1) { animation-delay:  0s; }
-.loading span:nth-child(2) { animation-delay: .1s; }
-.loading span:nth-child(3) { animation-delay: .2s; }
-.loading span:nth-child(4) { animation-delay: .4s; }
-.loading span:nth-child(5) { animation-delay: .5s; }
-.loading span:nth-child(6) { animation-delay: .6s; }
-.loading span:nth-child(7) { animation-delay: .7s; }
-.loading span:nth-child(8) { animation-delay: .8s; }
-.loading span:nth-child(9) { animation-delay: .9s; }
-.loading span:nth-child(10){ animation-delay:  1s; }
+.loading span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.loading span:nth-child(2) {
+    animation-delay: .1s;
+}
+
+.loading span:nth-child(3) {
+    animation-delay: .2s;
+}
+
+.loading span:nth-child(4) {
+    animation-delay: .4s;
+}
+
+.loading span:nth-child(5) {
+    animation-delay: .5s;
+}
+
+.loading span:nth-child(6) {
+    animation-delay: .6s;
+}
+
+.loading span:nth-child(7) {
+    animation-delay: .7s;
+}
+
+.loading span:nth-child(8) {
+    animation-delay: .8s;
+}
+
+.loading span:nth-child(9) {
+    animation-delay: .9s;
+}
+
+.loading span:nth-child(10) {
+    animation-delay: 1s;
+}
+
+#spark-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    pointer-events: none;
+    z-index: 999;
+}
+
+.spark {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    opacity: 1;
+    z-index: 100;
+}

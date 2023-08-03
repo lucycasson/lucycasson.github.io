@@ -230,3 +230,77 @@ $.preload = function (imgs) {
     $("<img />")[0].src = this;
   });
 };
+
+$(document).ready(function () {
+  function animateSpark(spark, startX, startY, velocityX, velocityY, gravityAcceleration, opacity, duration) {
+      velocityY += gravityAcceleration; // Apply gravity to Y velocity
+      startX += velocityX;
+      startY += velocityY;
+
+      spark.css({ top: startY + "px", left: startX + "px", opacity: opacity });
+
+      if (startY < window.innerHeight && duration > 0) {
+          opacity -= 0.01; // Reduce opacity incrementally
+          requestAnimationFrame(function () {
+              animateSpark(spark, startX, startY, velocityX, velocityY, gravityAcceleration, opacity, duration - 1);
+          });
+      } else {
+          spark.remove();
+      }
+  }
+
+  $(document).on("click", function (event) {
+      const sparkContainer = $("#spark-container");
+
+      // Get the mouse position
+      const mouseX = event.clientX;
+      const mouseY = event.clientY;
+
+      // Generate a random number of sparks between 5-15
+      const numSparks = Math.floor(Math.random() * 11) + 5;
+
+      // Create multiple sparks
+      for (let i = 0; i < numSparks; i++) {
+          // Create a spark at the mouse position
+          const spark = $("<div>").addClass("spark");
+
+          // Randomize spark size and color
+          const sparkSize = Math.random() * 6 + 2; // Random size between 2 and 8
+          const sparkColor = getRandomColor();
+
+          spark.css({
+              left: mouseX + "px",
+              top: mouseY + "px",
+              width: sparkSize + "px",
+              height: sparkSize + "px",
+              background: sparkColor,
+          });
+
+          // Add the spark to the container
+          sparkContainer.append(spark);
+
+          // Animate the spark away from the cursor at random initial X and Y velocities
+          const initialVelocityX = (Math.random() - 0.5) * 5; // Random X velocity between -2.5 and 2.5
+          const initialVelocityY = (Math.random() - 1) * 5; // Random Y velocity between -5 and 0
+
+          // Apply constant gravitational acceleration to each spark
+          const gravityAcceleration = 0.1; // Adjust the gravity acceleration to control the curve
+
+          // Set the duration for each spark to last between 50 and 100 frames
+          const sparkDuration = Math.floor(Math.random() * 51) + 50;
+
+          // Start the animation along the curve for the spark
+          animateSpark(spark, mouseX, mouseY, initialVelocityX, initialVelocityY, gravityAcceleration, 1, sparkDuration);
+      }
+  });
+
+  // Helper function to get a random color in hexadecimal format
+  function getRandomColor() {
+      const letters = "0123456789ABCDEF";
+      let color = "#";
+      for (let i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+  }
+});
