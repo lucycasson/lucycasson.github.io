@@ -237,9 +237,16 @@ $(document).ready(function () {
       startX += velocityX;
       startY += velocityY;
 
+      // Get the position of the spark relative to the viewport
+      const sparkRect = spark[0].getBoundingClientRect();
+
+      // Calculate the maximum allowed Y position (accounting for the window height and scroll position)
+      const maxYPosition = $(window).height() + window.pageYOffset - sparkRect.height;
+      const maxXPosition = $(window).width() - sparkRect.width;
+
       spark.css({ top: startY + "px", left: startX + "px", opacity: opacity });
 
-      if (startY < window.innerHeight && duration > 0) {
+      if (sparkRect.top < maxYPosition && sparkRect.left < maxXPosition && duration > 0) {
           opacity -= 0.01; // Reduce opacity incrementally
           requestAnimationFrame(function () {
               animateSpark(spark, startX, startY, velocityX, velocityY, gravityAcceleration, opacity, duration - 1);
@@ -254,7 +261,7 @@ $(document).ready(function () {
 
       // Get the mouse position
       const mouseX = event.clientX;
-      const mouseY = event.clientY;
+      const mouseY = event.clientY + window.pageYOffset; // Add the scroll position
 
       // Generate a random number of sparks between 5-15
       const numSparks = Math.floor(Math.random() * 11) + 5;
