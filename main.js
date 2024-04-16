@@ -6,6 +6,20 @@ $(document).ready(function () {
     300
   );
 
+  function provideHapticFeedback() {
+    // Check if the Vibration API is supported by the browser
+    if ("vibrate" in navigator) {
+      // Vibrate for 100 milliseconds
+      navigator.vibrate(100);
+    } else {
+      // Fallback for browsers that don't support the Vibration API
+      console.log("Vibration API not supported");
+    }
+  }
+  
+  // Attach the function to the 'click' event on the document body
+  document.body.addEventListener("click", provideHapticFeedback);
+
   // Creates a clone div so we can animate out to auto height (animates clone then fades in real)
 
   var $originalDiv = $("#container");
