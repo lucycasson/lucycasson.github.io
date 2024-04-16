@@ -9,8 +9,8 @@ $(document).ready(function () {
   function provideHapticFeedback() {
     // Check if the Vibration API is supported by the browser
     if ("vibrate" in navigator) {
-      // Vibrate for 100 milliseconds
-      navigator.vibrate(75);
+      // Vibrate for 50 milliseconds
+      navigator.vibrate(50);
     } else {
       // Fallback for browsers that don't support the Vibration API
       console.log("Vibration API not supported");
