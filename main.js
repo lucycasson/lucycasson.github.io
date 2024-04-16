@@ -10,7 +10,7 @@ $(document).ready(function () {
     // Check if the Vibration API is supported by the browser
     if ("vibrate" in navigator) {
       // Vibrate for 100 milliseconds
-      navigator.vibrate(100);
+      navigator.vibrate(75);
     } else {
       // Fallback for browsers that don't support the Vibration API
       console.log("Vibration API not supported");
