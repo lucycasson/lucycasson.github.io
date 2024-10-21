@@ -58,98 +58,10 @@ $(document).ready(function () {
           }, 300);
 
           // Now that this page is loaded, we can preload other page images so they load faster
-          // GALLERY PRELOAD
-          $.preload([
-            "media/gallery/3.jpg",
-            "media/gallery/1.jpg",
-            "media/gallery/4.jpg",
-            "media/gallery/14.jpg",
-            "media/gallery/18.jpg",
-            "media/gallery/9.jpg",
-            "media/gallery/2.jpg",
-            "media/gallery/5.jpg",
-            "media/gallery/6.jpg",
-            "media/gallery/7.jpg",
-            "media/gallery/26.jpg",
-            "media/gallery/10.jpg",
-            "media/gallery/8.jpg",
-            "media/gallery/13.jpg",
-            "media/gallery/12.jpg",
-            "media/gallery/11.jpg",
-            "media/gallery/17.jpg",
-            "media/gallery/27.jpg",
-            "media/gallery/21.jpg",
-            "media/gallery/24.jpg",
-            "media/gallery/19.jpg",
-            "media/gallery/20.jpg",
-            "media/gallery/22.jpg",
-            "media/gallery/28.jpg",
-            "media/gallery/29.jpg",
-            "media/gallery/15.jpg",
-            "media/gallery/16.jpg",
-            "media/gallery/34.jpg",
-            "media/gallery/25.jpg",
-            "media/gallery/23.jpg",
-            "media/gallery/33.jpg",
-            "media/gallery/30.jpg",
-            "media/gallery/31.jpg",
-            "media/gallery/32.jpg",
-            "media/gallery/37.jpg",
-            "media/gallery/36.jpg",
-            "media/gallery/35.jpg",
-            "media/gallery/38.jpg",
-          ]);
-          // BATHROOM PROJECT PRELOAD
-          $.preload([
-            "media/project_photos/bathroom/old2.jpg",
-            "media/project_photos/bathroom/old1.jpg",
-            "media/project_photos/bathroom/old3.jpg",
-            "media/project_photos/bathroom/top1.jpg",
-            "media/project_photos/bathroom/top2.jpg",
-            "media/project_photos/bathroom/wide1.jpg",
-            "media/project_photos/bathroom/niche1.jpg",
-            "media/project_photos/bathroom/tall1.jpg",
-            "media/project_photos/bathroom/tall2.jpg",
-            "media/project_photos/bathroom/niche2.jpg",
-            "media/project_photos/bathroom/plan1.jpg",
-            "media/project_photos/bathroom/plan2.jpg",
-            "media/project_photos/bathroom/big.jpg",
-            "media/project_photos/bathroom/final.jpg",
-          ]);
-          // FREELANCE PRELOAD
-          $.preload([
-            "media/project_photos/freelance/floorplan.jpg",
-            "media/project_photos/freelance/drawing.jpg",
-            "media/project_photos/freelance/floorplan2.jpg",
-            "media/project_photos/freelance/render.jpg",
-            "media/project_photos/freelance/drawing2.jpg",
-            "media/project_photos/freelance/render2.jpg",
-            "media/project_photos/freelance/floorplan3.jpg",
-            "media/project_photos/freelance/drawing3.jpg",
-            "media/project_photos/freelance/render3.jpg",
-            "media/project_photos/freelance/floorplan4.jpg",
-            "media/project_photos/freelance/render4.jpg",
-          ]);
-          // LCI PROJECT PRELOAD
-          $.preload([
-            "media/project_photos/home/sketch.JPG",
-            "media/project_photos/home/floorplan5.JPG",
-            "media/project_photos/home/floorplan1.JPG",
-            "media/project_photos/home/photoshop1.jpg",
-            "media/project_photos/home/floorplan4.JPG",
-            "media/project_photos/home/floorplan3.JPG",
-            "media/project_photos/home/lay1.jpg",
-            "media/project_photos/home/render1.jpeg",
-            "media/project_photos/home/render8.jpg",
-            "media/project_photos/home/render9.jpg",
-            "media/project_photos/home/render4.jpg",
-            "media/project_photos/home/render3.jpg",
-            "media/project_photos/home/render2.jpeg",
-            "media/project_photos/home/render5.jpg",
-            "media/project_photos/home/render7.jpg",
-            "media/project_photos/home/render6.jpg",
-          ]);
-          // TODO: preload images for 3rd project, once it's added
+          loadScript("service-worker.js", function() {
+            console.log("Service worker loaded successfully.");
+          });
+          
         });
     });
 
@@ -332,3 +244,20 @@ $(document).ready(function () {
       }
   });
 });
+
+
+function loadScript(url, callback) {
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = url;
+
+  // Run the callback function once the script is loaded
+  script.onload = function() {
+    if (callback) {
+      callback();
+    }
+  };
+
+  // Append the script to the document head or body
+  document.head.appendChild(script);  // or document.body.appendChild(script);
+}
