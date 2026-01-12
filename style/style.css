@@ -546,7 +546,14 @@ form li input {
 /* Cards */
 #scrollable,
 #scrollable2,
-#scrollable3 {
+#scrollable3,
+#scrollable4,
+#scrollable5,
+#scrollable6,
+#scrollable7,
+#scrollable8,
+#scrollable9,
+#scrollable10 {
     display: flex;
     width: 98%;
     flex-wrap: nowrap;
