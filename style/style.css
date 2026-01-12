@@ -1,9 +1,9 @@
 * {
-    cursor: url(media/pointer.png), auto;
+    cursor: url(../media/pointer.png), auto;
 }
 
 body {
-    background-image: url(media/overlay.png);
+    background-image: url(../media/overlay.png);
     background-size: 100%;
     background-repeat: repeat;
     background: var(--arc-palette-maxContrastColor, rgb(16, 42, 109));
@@ -76,7 +76,7 @@ nav li a {
     flex-grow: 1;
     flex-shrink: 1;
     justify-content: center;
-    cursor: url(media/clicker.png), auto;
+    cursor: url(../media/clicker.png), auto;
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -116,7 +116,7 @@ h4 {
 content a {
     position: relative;
     z-index: 1000000 !important;
-    cursor: url(media/clicker.png), auto !important;
+    cursor: url(../media/clicker.png), auto !important;
     font-weight: bold;
 }
 
@@ -285,7 +285,7 @@ textarea {
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.1);
     font-size: 20px;
     color: rgba(0, 0, 0, 0.9);
-    cursor: url(media/text.png), auto;
+    cursor: url(../media/text.png), auto;
     font-family: "Optima", Arial, Helvetica, Verdana, Tahoma, Trebuchet MS, sans-serif;
     background-color: var(--arc-palette-foregroundPrimary, rgb(251, 183, 239));
 }
@@ -314,7 +314,7 @@ form li {
 }
 
 form li input {
-    cursor: url(media/clicker.png), auto;
+    cursor: url(../media/clicker.png), auto;
     background-color: var(--arc-palette-foregroundPrimary, rgb(251, 183, 239));
 }
 
@@ -330,7 +330,7 @@ form li input {
 }
 
 .social-media-icon {
-    cursor: url(media/clicker.png), auto;
+    cursor: url(../media/clicker.png), auto;
     display: inline-block;
     /* display the icons on the same line */
     max-width: 30px;
@@ -586,7 +586,7 @@ form li input {
     z-index: 1;
     transition: transform .3s ease-in-out;
     /* Animation */
-    cursor: url(media/clicker.png), auto;
+    cursor: url(../media/clicker.png), auto;
 }
 
 .duplicate-image {
@@ -622,7 +622,7 @@ form li input {
     /* initial state with transparent background */
     z-index: 999;
     transition: background-color 0.5s ease-in-out, backdrop-filter 0.5s ease-in-out;
-    cursor: url(media/clicker.png), auto;
+    cursor: url(../media/clicker.png), auto;
 }
 
 .overlay.fade-in {
