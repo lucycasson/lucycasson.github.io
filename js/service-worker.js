@@ -61,6 +61,16 @@ $.preload([
 "media/gallery/59.jpg",
 "media/gallery/60.jpg"
 ]);
+// CONSTRUCTION SITE OFFICE PRELOAD 
+$.preload([
+"media/project_protos/site-office/green-wall.jpg",
+"media/project_protos/site-office/green-wall-doors.jpg",
+"media/project_protos/site-office/kitchen.jpg",
+"media/project_protos/site-office/kitchen2.jpg",
+"media/project_protos/site-office/kitchen3.jpg",
+"media/project_protos/site-office/render.jpg",
+"media/project_protos/site-office/wood-wall.jpg",
+])
 // BATHROOM PROJECT PRELOAD
 $.preload([
 "media/project_photos/bathroom/old2.jpg",

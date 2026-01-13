@@ -475,6 +475,7 @@ form li input {
     border-radius: 10px;
     margin-left: none;
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.1);
+    cursor: url(../media/clicker.png), auto;
 }
 
 /* REGULAR SCREEN SIZES */
